@@ -1,4 +1,3 @@
-// Fixed game logic with state management and draw detection
 const gameOver = new Audio('./gameover.mp3');
 const gameMusic = new Audio('./music.mp3');
 const turnMusic = new Audio('./ting.mp3');
