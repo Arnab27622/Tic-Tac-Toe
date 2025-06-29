@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    list-style-type: none;
+    background-color: rgb(132, 17, 132);
+    padding: 10px;
+    color: aliceblue;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.line{
+    background-color: rgb(136, 0, 255);
+    height: 0;
+    width: 0;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+
+.gameContainer {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 8vw);
+    grid-template-rows: repeat(3, 8vw);
+    font-family: 'Inter', sans-serif;
+}
+
+.gameContainer div {
+    border: 1.5px solid black;
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.imgbox img {
+    width: 0px;
+    transition: width 1s ease-in-out;
+}
+
+.box:hover {
+    background: rgb(231, 205, 255);
+    transition: background 0.3s ease-in-out;
+}
+
+.box:focus {
+    outline: 2px solid blue;
+    background: rgb(210, 180, 240);
+}
+
+.box.br-0 {
+    border-right: 0px;
+}
+
+.box.bl-0 {
+    border-left: 0;
+}
+
+.box.bt-0 {
+    border-top: 0px;
+}
+
+.box.bb-0 {
+    border-bottom: 0;
+}
+
+.gameInfo {
+    margin: 30px 70px;
+}
+
+.gameInfo h1 {
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.info {
+    font-family: 'Inter', sans-serif;
+    display: none;
+    margin-right: 10px;
+}
+
+#startGame,
+#reset {
+    margin: 0 15px 0 0;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-weight: bolder;
+    background-color: #dc97ff;
+    border: none;
+}
+
+#startGame:focus,
+#reset:focus {
+    outline: 2px solid #8a2be2;
+    background-color: #c86bf8;
+}
+
+@media screen and (max-width: 835px) {
+    .container {
+        padding-left: 55px;
+    }
+
+    .gameInfo h1 {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 793px) {
+    .container {
+        flex-wrap: wrap;
+        padding: 0 55px;
+    }
+
+    .gameContainer {
+        grid-template-columns: repeat(3, 16vw);
+        grid-template-rows: repeat(3, 16vw);
+    }
+}
+
+@media screen and (max-width: 456px) {
+    .container {
+        padding: 0;
+    }
+}
